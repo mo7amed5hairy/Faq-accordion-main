@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root
+{
+--White: hsl(0, 0%, 100%);
+--Lightpink: hsl(275, 100%, 97%);
+--Grayishpurple: hsl(292, 16%, 49%);
+--Darkpurple: hsl(292, 42%, 14%);
+
+}
+
+*
+{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+
+main
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./assets/images/background-pattern-desktop.svg)  var(--Lightpink) no-repeat;
+}
+
+
+main > .accordion_container 
+{
+   
+    width: 34rem;
+    margin: auto;
+    background-color: #fff;
+    padding: 1rem 2.2rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px hsl(276, 12.4%, 76.3%);
+}
+
+
+
+main > .accordion_container > .accordion_heading
+{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 20px;
+   padding: 20px 0 30px;
+}
+
+ main > .accordion_container > .accordion_heading > h1
+  {
+    font-size: 50px;
+    color: var(--Darkpurple);
+  }
+
+  main > .accordion_container > .accordion_content > .accordion
+{
+    padding: 15px 0 20px;
+    border-bottom: 1px solid var(--Lightpink);
+}
+
+main > .accordion_container > .accordion_content > .accordion:last-child
+{
+  border: none;
+}
+
+  main > .accordion_container > .accordion_content > .accordion > .acc_heading
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  main > .accordion_container > .accordion_content > .accordion > .acc_heading > h1
+  {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--Darkpurple);
+  }
+
+  main > .accordion_container > .accordion_content > .accordion > .acc_heading > button
+  {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_0,
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_1,
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_2,
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_3
+
+  {
+
+ 
+    font-size: 0px;
+    font-weight: 400;
+    color: var(--Grayishpurple);
+    line-height: 0;
+    transition: .4s ease-out;
+   
+
+
+    
+    
+  }
+
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_0.active,
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_1.active,
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_2.active,
+  main > .accordion_container > .accordion_content > .accordion > .acc_content_3.active 
+
+  {
+    font-size: 15px;
+    line-height: 1.5;
+    transition: .4s ease-in-out;
+  }
+
+
+
+.attribution { font-size: 14px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* mobile view */
+@media (min-width:360px) and  (max-width:900px) 
+{
+    main > .accordion_container {
+       
+
+        width: 20rem;
+    }
+
+    p
+    {
+        padding-top: 15px;
+    }
+}
+
+
+/* mobile view */
